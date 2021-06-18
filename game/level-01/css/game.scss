@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url(../game-assets/background.png);
+    background-size: cover;
+    background-position: bottom center;
+    font-family: 'Press Start 2P', cursive;
+}
+
+canvas {
+    box-shadow: 0px 5px 10px #444;
+    margin-top: -20px;
+}
+
+.btn-pause {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    outline: none;
+    border: 0;
+    background-color: transparent;
+    background-image: url(../game-assets/pause.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    z-index: 9;
+    opacity: 0.5;
+    top: 30px;
+    left: 20px;
+    transition: all .5s;
+    cursor: pointer;
+    &:hover {
+        transition: all .5s;
+        opacity: 1;
+    }
+    @media (max-width: 991px) {
+        width: 30px;
+        height: 30px;
+        top: 15px;
+        left: 15px;
+    }
+}
+
+.score {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    z-index: 9;
+    font-size: 30px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.button-wrapper {
+    width: 100%;
+    max-width: 170px;
+    height: 80px;
+    margin: auto;
+    position: absolute;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    text-align: center;
+    display: none;
+}
+
+.button {
+    position: relative;
+    left: 0;
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    opacity: 0.3;
+    background-image: url(../game-assets/arrow.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transform: rotate(-180deg);
+}
+
+.btn-right {
+    transform: rotate(0deg);
+    right: 0;
+    margin-left: 30px;
+}
+
+.btn-up {
+    transform: rotate(-90deg);
+    position: absolute;
+    top: -70px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.loading {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: rgba(#000, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: auto;
+        margin: auto;
+    }
+}
+
+.swal2-popup {
+    background-size: cover!important;
+    background-position: top center!important;
+    background-repeat: no-repeat!important;
+    background-image: url(../game-assets/background.png)!important;
+    h2 {
+        color: #000!important;
+        font-family: 'Press Start 2P', cursive!important;
+        margin-bottom: 20px!important;
+    }
+    .swal2-content {
+        color: #000!important;
+        line-height: 25px!important;
+        font-family: 'Press Start 2P', cursive!important;
+    }
+}
+
+.pause {
+    visibility: hidden;
+    pointer-events: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../game-assets/bg-01.gif);
+    &.active {
+        visibility: visible;
+        pointer-events: all;
+    }
+    .content {
+        width: 450px;
+        height: auto;
+        padding: 30px;
+        background-color: rgba(#000, 0.5);
+        ul {
+            li {
+                font-size: 20px;
+                line-height: 25px;
+                color: #fff;
+                font-family: 'Press Start 2P', cursive;
+                margin-bottom: 20px;
+                cursor: pointer;
+                &:hover {
+                    color: yellow;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .button-wrapper {
+        display: block;
+    }
+    canvas {
+        width: 100%;
+        height: 100vh;
+        box-shadow: none;
+    }
+    body {
+        background-color: black;
+        background-image: none;
+    }
+}

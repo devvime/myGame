@@ -1,0 +1,48 @@
+#root {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+
+body,
+html {
+  background-color: #343a40;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jumbotron {
+  background-color: #212325;
+  color: #fff;
+}
+
+.profile {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.buttons img {
+  width: 100%;
+  max-width: 30px;
+  margin-right: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.buttons img:hover {
+  -webkit-transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+/*# sourceMappingURL=style.css.map */
